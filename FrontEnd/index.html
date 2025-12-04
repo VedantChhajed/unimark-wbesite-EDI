@@ -113,6 +113,7 @@
 
     <div id="footer"></div>
 
+    <script src="js/env-config.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Firebase Google Auth -->
@@ -120,13 +121,14 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
         import { getAuth, signInWithPopup, signOut, onAuthStateChanged, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
+        // Use Firebase config from environment variables (window.ENV)
         const firebaseConfig = {
-            apiKey: "AIzaSyBzAJOsQoMYXAr_atquwY-1fMW8-g4xAa0",
-            authDomain: "timelyremind-1d361.firebaseapp.com",
-            projectId: "timelyremind-1d361",
-            storageBucket: "timelyremind-1d361.firebasestorage.app",
-            messagingSenderId: "257503539917",
-            appId: "1:257503539917:web:cf6066d5d640725f706f84"
+            apiKey: window.ENV?.VITE_FIREBASE_API_KEY_3 || '',
+            authDomain: window.ENV?.VITE_FIREBASE_AUTH_DOMAIN_3 || '',
+            projectId: window.ENV?.VITE_FIREBASE_PROJECT_ID_3 || '',
+            storageBucket: window.ENV?.VITE_FIREBASE_STORAGE_BUCKET_3 || '',
+            messagingSenderId: window.ENV?.VITE_FIREBASE_MESSAGING_SENDER_ID_3 || '',
+            appId: window.ENV?.VITE_FIREBASE_APP_ID_3 || ''
         };
 
         const app = initializeApp(firebaseConfig);
