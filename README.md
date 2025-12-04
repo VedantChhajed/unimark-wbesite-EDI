@@ -38,14 +38,47 @@ This project is a collaborative effort to build a comprehensive college attendan
     ```bash
     cd attendance-system
     ```
-3. Install dependencies:
+3. Set up environment variables:
+    ```bash
+    # Copy the example environment file
+    cp .env.example .env
+    
+    # Edit .env and fill in your Firebase configuration values
+    # You can get these from your Firebase Console
+    ```
+4. Install dependencies:
     ```bash
     npm install
     ```
-4. Start the development server:
+5. Start the development server:
     ```bash
     npm start
     ```
+
+**Important:** Make sure to include `env-config.js` script in your HTML files before any Firebase initialization scripts:
+```html
+<script src="/FrontEnd/js/env-config.js"></script>
+```
+
+## Environment Variables
+
+This project uses environment variables to manage Firebase API keys and configuration. The `.env` file contains sensitive information and should never be committed to version control.
+
+### Setup
+
+1. Copy `.env.example` to `.env`
+2. Fill in your Firebase configuration values from the Firebase Console
+3. The project uses three Firebase projects:
+   - **Project 1 (unimark-ummaa)**: Main project for authentication and core features
+   - **Project 2 (unimark-b93b7)**: Used for signup and profile management
+   - **Project 3 (timelyremind-1d361)**: Additional features
+
+### For Production
+
+When deploying to production, make sure to:
+1. Set environment variables in your hosting platform
+2. Or use a build tool that can inject these values at build time
+3. The `env-config.js` file should be updated to load from your production environment
 
 ## Contributing
 

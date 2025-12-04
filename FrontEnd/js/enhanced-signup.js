@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Firebase if not already initialized
     if (!firebase.apps.length) {
         const firebaseConfig = {
-            apiKey: "AIzaSyBiQr7aHxdYxk8sCkHxMebkVyBEgXCnknU",
-            authDomain: "unimark-b93b7.firebaseapp.com",
-            projectId: "unimark-b93b7",
-            storageBucket: "unimark-b93b7.appspot.com",
-            messagingSenderId: "107180777427",
-            appId: "1:107180777427:web:2c5d8e8c4207f26e7ffd27"
+            apiKey: window.ENV?.VITE_FIREBASE_API_KEY_2 || '',
+            authDomain: window.ENV?.VITE_FIREBASE_AUTH_DOMAIN_2 || '',
+            projectId: window.ENV?.VITE_FIREBASE_PROJECT_ID_2 || '',
+            storageBucket: window.ENV?.VITE_FIREBASE_STORAGE_BUCKET_2 || '',
+            messagingSenderId: window.ENV?.VITE_FIREBASE_MESSAGING_SENDER_ID_2 || '',
+            appId: window.ENV?.VITE_FIREBASE_APP_ID_2 || ''
         };
         firebase.initializeApp(firebaseConfig);
     }
