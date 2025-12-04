@@ -1,12 +1,7 @@
 // Firebase Configuration - Shared across all pages
-export const firebaseConfig = {
-    apiKey: "AIzaSyBzAJOsQoMYXAr_atquwY-1fMW8-g4xAa0",
-    authDomain: "timelyremind-1d361.firebaseapp.com",
-    projectId: "timelyremind-1d361",
-    storageBucket: "timelyremind-1d361.firebasestorage.app",
-    messagingSenderId: "257503539917",
-    appId: "1:257503539917:web:cf6066d5d640725f706f84"
-};
+// Import from environment config
+import { firebaseConfig3 as firebaseConfig } from './firebase-env-config.js';
+export { firebaseConfig };
 
 // Generate random 6-character attendance code
 export function generateCode() {

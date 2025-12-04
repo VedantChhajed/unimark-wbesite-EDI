@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const studentPhoto = document.getElementById('studentPhoto');
     const watermarkText = document.getElementById('watermarkText');
     
-    // Firebase configuration
+    // Firebase configuration - loaded from environment variables
     const firebaseConfig = {
-        apiKey: "AIzaSyBlDVySUopFPBIot8dMovVxin8de43zXmI",
-        authDomain: "unimark-ummaa.firebaseapp.com",
-        projectId: "unimark-ummaa",
-        storageBucket: "unimark-ummaa.firebasestorage.app",
-        messagingSenderId: "710977794450",
-        appId: "1:710977794450:web:46c51e7be2b5c36892d14b",
-        measurementId: "G-MQQKNHDP1T"
+        apiKey: window.ENV?.VITE_FIREBASE_API_KEY_1 || '',
+        authDomain: window.ENV?.VITE_FIREBASE_AUTH_DOMAIN_1 || '',
+        projectId: window.ENV?.VITE_FIREBASE_PROJECT_ID_1 || '',
+        storageBucket: window.ENV?.VITE_FIREBASE_STORAGE_BUCKET_1 || '',
+        messagingSenderId: window.ENV?.VITE_FIREBASE_MESSAGING_SENDER_ID_1 || '',
+        appId: window.ENV?.VITE_FIREBASE_APP_ID_1 || '',
+        measurementId: window.ENV?.VITE_FIREBASE_MEASUREMENT_ID_1 || ''
     };
 
     // Initialize Firebase

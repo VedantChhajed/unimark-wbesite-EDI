@@ -2,17 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
-
-// Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyBlDVySUopFPBIot8dMovVxin8de43zXmI",
-    authDomain: "unimark-ummaa.firebaseapp.com",
-    projectId: "unimark-ummaa",
-    storageBucket: "unimark-ummaa.firebasestorage.app",
-    messagingSenderId: "710977794450",
-    appId: "1:710977794450:web:46c51e7be2b5c36892d14b",
-    measurementId: "G-MQQKNHDP1T"
-};
+import { firebaseConfig1 as firebaseConfig } from './firebase-env-config.js';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
