@@ -55,6 +55,32 @@ We welcome contributions from the community. Please read our [contributing guide
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages. The frontend application is automatically deployed whenever changes are pushed to the `main` branch.
+
+### GitHub Pages Setup
+
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to repository **Settings** → **Pages**
+   - Under "Build and deployment", select **Source**: GitHub Actions
+   
+2. **Automatic Deployment**:
+   - The workflow file `.github/workflows/deploy.yml` handles automatic deployment
+   - Every push to the `main` branch triggers a new deployment
+   - You can also manually trigger deployment from the **Actions** tab
+
+3. **Access Your Site**:
+   - Once deployed, your site will be available at: `https://<username>.github.io/<repository-name>/`
+   - For this repository: `https://vedantchhajed.github.io/unimark-wbesite-EDI/`
+
+### Manual Deployment
+
+To manually trigger a deployment:
+1. Go to the **Actions** tab in your GitHub repository
+2. Select the "Deploy to GitHub Pages" workflow
+3. Click **Run workflow** → **Run workflow**
+
 ## Contact
 
 For any questions or suggestions, please contact us at [email@example.com](mailto:email@example.com).
